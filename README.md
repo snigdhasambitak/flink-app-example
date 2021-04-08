@@ -73,7 +73,13 @@ DataStream<Tuple2<String, Integer>> dataStream = env
 dataStream.print();
 ```
 
-IP 192.168.99.1 allows container to access services running on minikube host. For this example to work, you need to run nc -lk 9999 on your host before creating the JobManager pod
+IP 192.168.99.1 allows container to access services running on minikube host. For this example to work, you need to run the following on your host before creating the JobManager pod
+
+```
+nc -lk 9999
+
+```
+
 
 ## build the  code using maven
 

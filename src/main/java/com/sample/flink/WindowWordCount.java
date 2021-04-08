@@ -13,7 +13,7 @@ public class WindowWordCount {
     env.enableCheckpointing(10_000);
 
     DataStream<Tuple2<String, Integer>> dataStream = env
-        .socketTextStream("192.168.99.1", 9999)
+        .socketTextStream("localhost", 9999)
         .flatMap(new Splitter())
         .keyBy(0)
         .timeWindow(Time.seconds(5))
