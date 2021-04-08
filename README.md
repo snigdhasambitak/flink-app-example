@@ -63,14 +63,6 @@ source .bash_profile  // in case you use .bash_profile
 ## Let us create a simple streaming job, that reads data from socket, and prints the count of words every 5 seconds
 
 ```
-
-2
-3
-4
-5
-6
-7
-8
 DataStream<Tuple2<String, Integer>> dataStream = env
     .socketTextStream("192.168.99.1", 9999)
     .flatMap(new Splitter())
