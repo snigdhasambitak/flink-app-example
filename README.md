@@ -1,4 +1,5 @@
 # flink-app-example
+
 simple flink app and kubernetes deployment configurations
 
 ## check java version
@@ -37,7 +38,7 @@ $ tar xzf flink-*.tgz   # Unpack the downloaded archive
 $ cd flink-1.9.0
 ```
 
-## Start a Local Flink Cluster
+## start a Local Flink Cluster
 
 ```
 ./bin/start-cluster.sh  # Start Flink
@@ -60,7 +61,7 @@ export PATH=/usr/local/Cellar/apache-flink/1.9.0/libexec/bin:$PATH
 source .bash_profile  // in case you use .bash_profile
 ```
 
-## Let us create a simple streaming job, that reads data from socket, and prints the count of words every 5 seconds
+## create a simple streaming job, that reads data from socket, and prints the count of words every 5 seconds
 
 ```
 DataStream<Tuple2<String, Integer>> dataStream = env
